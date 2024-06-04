@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Courgette";
+  src: url("FA_Style/webfonts/Courgette-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,7 +14,7 @@
 body {
   background-image: url('Images/Background.jpg');
   background-size: cover;
-  /*font-family: 'Caveat', cursive;*/
+  font-family: 'Courgette';
   font-size: 16px; /* базовый размер шрифта */
 }
 
