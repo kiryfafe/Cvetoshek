@@ -1,6 +1,12 @@
 @font-face {
-  font-family: "Yeast";
-  src: url("FA_Style/webfonts/yeast.otf") format("opentype");
+  font-family: "Kreadon";
+  src: url("FA_Style/webfonts/Kreadon-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Magnet";
+  src: url("FA_Style/webfonts/MagnetTrial-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
@@ -14,7 +20,7 @@
 body {
   background-image: url('Images/Background.jpg');
   background-size: cover;
-  font-family: 'Yeast';
+  font-family: 'Kreadon';
   font-size: 16px; /* базовый размер шрифта */
 }
 
@@ -46,6 +52,7 @@ h2 {
 .header-text {
   display: flex;
   margin-left: 1rem; /* 1rem = 16px */
+  font-family: 'Magnet';
 }
 
 .header-text h1 {
