@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cvetoshek - Букеты</title>
+    <link rel="stylesheet" href="Styles/styles.css">
+    <link rel="stylesheet" href="Styles/FA_Style/css/all.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+	$(document).ready(function() {
+		$(".add-to-cart-button").on("click", function() {
+			var currentCount = parseInt(sessionStorage.getItem("cartCount")) || 0;
+
+			sessionStorage.setItem("cartCount", currentCount + 1);
+
+			var cartCount = $(".cart-count");
+			cartCount.text(currentCount + 1);
+
+			if (currentCount + 1 > 0) {
+				cartCount.css("display", "inline-block");
+			}
+		});
+
+		var currentCount = parseInt(sessionStorage.getItem("cartCount")) || 0;
+		var cartCount = $(".cart-count");
+		cartCount.text(currentCount);
+
+		if (currentCount > 0) {
+			cartCount.css("display", "inline-block");
+		}
+	});
+	</script>
+
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Styles/Images/Logo.png" alt="Cvetoshek Logo">
+        </div>
+		<div class="header-text">
+			<h1>ЦВЕТОШКИ ДЛЯ ЦВЕТОШКОВ</h1>
+		</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="bouquets.html">Букеты</a></li>
+                <li><a href="additional.html">Дополнительные товары</a></li>
+                <li><a href="about.html">О сайте</a></li>
+            </ul>
+			<ol>
+				<li>
+					<a href="#" class="cart-icon">
+						<i class="fas fa-shopping-cart"></i>
+						<span class="cart-count">0</span>
+					</a>
+				</li>
+                <li><a href="#" class="account-icon"><i class="fas fa-user"></i></a></li>
+			</ol>
+        </nav>
+    </header>
+
+    <!-- Bouquets Page -->
+    <section class="bouquets">
+        <h2>Букеты</h2>
+        <div class="product-card-container">
+            <div class="product-card">
+                <img src="Styles/Images/Bouqets/Tulp.jpg" alt="Bouquet 1">
+                <h3>Тюльпаны, но не Королёвой</h3>
+				<p>Тюльпаны, потому что я не мог купить тебе бриллиант, но эти цветы тоже красивые!</p>
+                <p>Цена: 2 030.00</p>
+                <button class="add-to-cart-button">Добавить в корзину</button>
+            </div>
+            <div class="product-card">
+                <img src="Styles/Images/Bouqets/Rose.jpg" alt="Bouquet 2">
+                <h3>Роза Азора</h3>
+				<p>Розы, потому что я не хочу платить за терапию, но хочу, чтобы ты знала, что я сожалею.</p>
+                <p>Цена: 6 350.00</p>
+                <button class="add-to-cart-button">Добавить в корзину</button>
+            </div>
+            <div class="product-card">
+                <img src="Styles/Images/Bouqets/Lilii.jpeg" alt="Bouquet 3">
+                <h3>Лилии анти....*апчхи*....аллергенные </h3>
+				<p>Лилии, потому что я хочу, чтобы ты знала, что ты - моя лилия, моя любовь и моя причина для покупки антигистаминных препаратов.</p>
+                <p>Цена: 2 400.00</p>
+                <button class="add-to-cart-button">Добавить в корзину</button>
+            </div>
+            <div class="product-card">
+                <img src="Styles/Images/Bouqets/Gipso.jpg" alt="Bouquet 4">
+                <h3>Гипсофилы нетрадиционные</h3>
+				<p>Гипсофилы, потому что ты - моя чистота сердца, моя искренность и моё счастье. Или может быть, я просто хочу, чтобы ты знала, что я не могу выбрать между белыми, розовыми и оранжевыми, поэтому я купил все!</p>
+                <p>Цена: 3 500.00</p>
+                <button class="add-to-cart-button">Добавить в корзину</button>
+            </div>
+            <div class="product-card">
+                <img src="Styles/Images/Bouqets/Land.jpg" alt="Bouquet 5">
+                <h3>Лааандыши, лааандыши....</h3>
+				<p>Ландыши, потому что я хочу, чтобы ты знала, что я готов рискнуть своей репутацией и попасть в Красную книгу, только чтобы быть с тобой.</p>
+                <p>Цена: 2 250.00</p>
+                <button class="add-to-cart-button">Добавить в корзину</button>
+            </div>
+            <div class="product-card">
+                <img src="Styles/Images/Bouqets/Chrizant.jpg" alt="Bouquet 6">
+                <h3>Хризантема китайская</h3>
+				<p>Хризантемы, потому что я слышал, что они символизируют долголетие, и я хочу, чтобы наша любовь длилась дольше, чем моя память о дне рождения твоей мамы.</p>
+                <p>Цена: 4 550.00</p>
+                <button class="add-to-cart-button">Добавить в корзину</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright © 2024 Cvetoshek</p>
+    </footer>
+</body>
+</html>

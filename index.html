@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cvetoshek - Главная</title>
+    <link rel="stylesheet" href="Styles/styles.css">
+    <link rel="stylesheet" href="Styles/FA_Style/css/all.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+	$(document).ready(function() {
+		$(".add-to-cart-button").on("click", function() {
+			var currentCount = parseInt(sessionStorage.getItem("cartCount")) || 0;
+
+			sessionStorage.setItem("cartCount", currentCount + 1);
+
+			var cartCount = $(".cart-count");
+			cartCount.text(currentCount + 1);
+
+			if (currentCount + 1 > 0) {
+				cartCount.css("display", "inline-block");
+			}
+		});
+
+		var currentCount = parseInt(sessionStorage.getItem("cartCount")) || 0;
+		var cartCount = $(".cart-count");
+		cartCount.text(currentCount);
+
+		if (currentCount > 0) {
+			cartCount.css("display", "inline-block");
+		}
+	});
+	</script>
+
+
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Styles/Images/Logo.png" alt="Cvetoshek Logo">
+        </div>
+		<div class="header-text">
+			<h1>ЦВЕТОШКИ ДЛЯ ЦВЕТОШКОВ</h1>
+		</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="bouquets.html">Букеты</a></li>
+                <li><a href="additional.html">Дополнительные товары</a></li>
+                <li><a href="about.html">О сайте</a></li>
+            </ul>
+			<ol>
+				<li>
+					<a href="#" class="cart-icon">
+						<i class="fas fa-shopping-cart"></i>
+						<span class="cart-count">0</span>
+					</a>
+				</li>
+                <li><a href="#" class="account-icon"><i class="fas fa-user"></i></a></li>
+			</ol>
+        </nav>
+    </header>
+
+    <!-- Home Page -->
+    <section class="main-info">
+        <h1>Добро пожаловать в наш магазин цветошков!</h1>
+        <p><i class="fa-solid fa-gift"></i></i>Если вы считаете, что ваша вторая половинка, родственник или просто прохожий нуждается в цветошках, то вам к нам!<i class="fa-solid fa-gift"></i></i></p>
+		<p>(❀´ ˘ `❀)Если вам кажется, что вы становитесь цветошком, то вам к нам!(❀´ ˘ `❀)</p>
+		<p><i class="fa-solid fa-face-grin-wink"></i>Если вы думаете, что в вашей жизни недостаточно цветошков, то вам к нам!<i class="fa-solid fa-face-grin-wink"></i></p>
+    </section>
+
+    <section class="featured-products">
+        <h2>Цветошковые новые!</h2>
+        <div class="product-card-container">
+            <div class="product-card">
+                <img src="Styles/Images/Main/Rost.jpg" alt="Product 1">
+                <h3>Я росту, а ты нет</h3>
+				<p>Можешь подарить своей низкой девушке, но за последствия мы не отвечаем.</p>
+                <p>Цена: 2 690.00</p>
+                <button class="add-to-cart-button">Добавить в корзину</button>
+            </div>
+            <div class="product-card">
+                <img src="Styles/Images/Main/Strong.jpg" alt="Product 2">
+                <h3>Тьфу-тьфу-тьфу</h3>
+				<p>Отличный подарок для суеверных родственников.</p>
+                <p>Цена: 3 500.00</p>
+                <button class="add-to-cart-button">Добавить в корзину</button>
+            </div>
+            <div class="product-card">
+                <img src="Styles/Images/Main/Appetit.jpg" alt="Product 3">
+                <h3>Приятного аппетита!</h3>
+				<p>🐬Изысканный деликатес из дельфиниумов🐬</p>
+                <p>Цена: 4 200.00</p>
+                <button class="add-to-cart-button">Добавить в корзину</button>
+            </div>
+            <div class="product-card">
+                <img src="Styles/Images/Main/Yarche.jpg" alt="Product 4">
+                <h3>Ярче твоей жизни</h3>
+				<p>Подходящий подарок "любимому" коллеге.</p>
+                <p>Цена: 3 250.00</p>
+                <button class="add-to-cart-button">Добавить в корзину</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright © 2024 Cvetoshek</p>
+    </footer>
+</body>
+</html>

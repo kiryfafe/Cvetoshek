@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cvetoshek - О сайте</title>
+    <link rel="stylesheet" href="Styles/styles.css">
+    <link rel="stylesheet" href="Styles/FA_Style/css/all.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+	$(document).ready(function() {
+		$(".add-to-cart-button").on("click", function() {
+			var currentCount = parseInt(sessionStorage.getItem("cartCount")) || 0;
+
+			sessionStorage.setItem("cartCount", currentCount + 1);
+
+			var cartCount = $(".cart-count");
+			cartCount.text(currentCount + 1);
+
+			if (currentCount + 1 > 0) {
+				cartCount.css("display", "inline-block");
+			}
+		});
+
+		var currentCount = parseInt(sessionStorage.getItem("cartCount")) || 0;
+		var cartCount = $(".cart-count");
+		cartCount.text(currentCount);
+
+		if (currentCount > 0) {
+			cartCount.css("display", "inline-block");
+		}
+	});
+	</script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Styles/Images/Logo.png" alt="Cvetoshek Logo">
+        </div>
+		<div class="header-text">
+			<h1>ЦВЕТОШКИ ДЛЯ ЦВЕТОШКОВ</h1>
+		</div>		
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="bouquets.html">Букеты</a></li>
+                <li><a href="additional.html">Дополнительные товары</a></li>
+                <li><a href="about.html">О сайте</a></li>
+            </ul>
+			<ol>
+				<li>
+					<a href="#" class="cart-icon">
+						<i class="fas fa-shopping-cart"></i>
+						<span class="cart-count">0</span>
+					</a>
+				</li>
+                <li><a href="#" class="account-icon"><i class="fas fa-user"></i></a></li>
+			</ol>
+        </nav>
+    </header>
+
+    <!-- About Us Page -->
+    <section class="about-us">
+		<div class="author-container">
+			<img src="Styles/Images/About/About.jpg" alt="Author" class="author-img">
+			<p class="author-caption"><i class="fa-solid fa-cat"></i>Это автор сайта<i class="fa-solid fa-cat"></i></p>
+			<p class="author-caption">P.S. Газеев Кирилл ТРИС 2-22</p><br>
+		</div>
+        <h2>О сайте</h2>
+        <p>Сайт создан в рамках учебного процесса.</p>
+        <p>Дисциплина: Технологии разработки Web-приложений</p>
+        <p>задач информационных систем.</p>
+        <p>Преподаватели: Григорьева. И.В., Хамидуллин А.И.</p>
+        <h3>Контактная информация:</h3>
+        <p>Адрес: KGEU</p>
+        <p>Email: Kote<i class="fa-solid fa-paw"></i>Kote.ru</p>
+        <p>Телефон: 88005553535</p><br><br><br><br>
+    </section>
+
+    <footer>
+        <p>Copyright © 2024 Cvetoshek</p>
+    </footer>
+</body>
+</html>

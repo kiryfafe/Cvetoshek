@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cvetoshek - Доп.Товары</title>
+    <link rel="stylesheet" href="Styles/styles.css">
+    <link rel="stylesheet" href="Styles/FA_Style/css/all.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+	$(document).ready(function() {
+		$(".add-to-cart-button").on("click", function() {
+			var currentCount = parseInt(sessionStorage.getItem("cartCount")) || 0;
+
+			sessionStorage.setItem("cartCount", currentCount + 1);
+
+			var cartCount = $(".cart-count");
+			cartCount.text(currentCount + 1);
+
+			if (currentCount + 1 > 0) {
+				cartCount.css("display", "inline-block");
+			}
+		});
+
+		var currentCount = parseInt(sessionStorage.getItem("cartCount")) || 0;
+		var cartCount = $(".cart-count");
+		cartCount.text(currentCount);
+
+		if (currentCount > 0) {
+			cartCount.css("display", "inline-block");
+		}
+	});
+	</script>
+
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Styles/Images/Logo.png" alt="Cvetoshek Logo">
+        </div>
+		<div class="header-text">
+			<h1>ЦВЕТОШКИ ДЛЯ ЦВЕТОШКОВ</h1>
+		</div>		
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="bouquets.html">Букеты</a></li>
+                <li><a href="additional.html">Дополнительные товары</a></li>
+                <li><a href="about.html">О сайте</a></li>
+            </ul>
+			<ol>
+				<li>
+					<a href="#" class="cart-icon">
+						<i class="fas fa-shopping-cart"></i>
+						<span class="cart-count">0</span>
+					</a>
+				</li>
+				<li><a href="#" class="account-icon"><i class="fas fa-user"></i></a></li>
+			</ol>
+        </nav>
+    </header>
+
+    <!-- Additional Products Page -->
+    <section class="additional-products">
+        <h2>Дополнительные товары</h2>
+        <div class="product-card-container">
+            <div class="product-card">
+                <img src="Styles/Images/Additional/Fetr.jpg" alt="Additional Product 1">
+                <h3>Упаковочный фетр</h3>
+				<p>Ну хотя бы не просто цветы....</p>
+                <p>Цена: 30.00</p>
+                <button class="add-to-cart-button">Добавить в корзину</button>
+            </div>
+            <div class="product-card">
+                <img src="Styles/Images/Additional/Organza.jpg" alt="Additional Product 2">
+                <h3>Упаковочная органза</h3>
+				<p>А это сделает твой букет легче пёрышка (по крайней мере на вид).</p>
+                <p>Цена: 50.00</p>
+                <button class="add-to-cart-button">Добавить в корзину</button>
+            </div>
+            <div class="product-card">
+                <img src="Styles/Images/Additional/Setka.jpg" alt="Additional Product 3">
+                <h3>Упаковочная сетка</h3>
+				<p>Минимализм, красота, эстетика. И нет, на рыбалку взять не получится.</p>
+                <p>Цена: 45.00</p>
+                <button class="add-to-cart-button">Добавить в корзину</button>
+            </div>
+            <div class="product-card">
+                <img src="Styles/Images/Additional/Top_HB.jpg" alt="Additional Product 4">
+                <h3>Топпер - С днём рождения!</h3>
+				<p>Если ты забыл о дне рождении девушки, то в подарок дарим иконку.</p>
+                <p>Цена: 150.00</p>
+                <button class="add-to-cart-button">Добавить в корзину</button>
+            </div>
+            <div class="product-card">
+                <img src="Styles/Images/Additional/Top_Love.jpg" alt="Additional Product 5">
+                <h3>Топпер - Любовь!</h3>
+				<p>Ещё один способ показать свою любовь!</p>
+                <p>Цена: 125.00</p>
+                <button class="add-to-cart-button">Добавить в корзину</button>
+            </div>
+            <div class="product-card">
+                <img src="Styles/Images/Additional/Top_Mom.jpeg" alt="Additional Product 6">
+                <h3>Топпер - Мамочке!</h3>
+				<p>Если ты забыл о дне рождении, то к ценнику прибавится 2 000 рублей. Мама - это святое!</p>
+                <p>Цена: 130.00</p>
+                <button class="add-to-cart-button">Добавить в корзину</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright © 2024 Cvetoshek</p>
+    </footer>
+</body>
+</html>

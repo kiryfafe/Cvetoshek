@@ -1,0 +1,252 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('Images/Background.jpg');
+  background-size: cover;
+  font-family: "Caveat", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px; /* базовый размер шрифта */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem; /* 2rem = 2 × 16px = 32px */
+  background: linear-gradient(to bottom, #DDA0DD 0%, #E6E6FA 25%, #F0F8FF 50%, #F0FFFF 100%);
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.5rem; /* 1.5rem = 1.5 × 16px = 24px */
+}
+
+.logo-container {
+  max-width: 30vw; /* 30% от ширины viewport */
+  height: auto;
+}
+
+.logo-container img {
+  border-radius: 30%;
+  box-shadow: 0 0 10px 2px #DDA0DD,
+              0 0 20px 4px #DDA0DD,
+              0 0 30px 6px #ffd700;
+}
+
+.header-text {
+  display: flex;
+  margin-left: 1rem; /* 1rem = 16px */
+}
+
+.header-text h1 {
+  font-size: 4rem; /* 4rem = 4 × 16px = 64px */
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  font-size: 1.5rem; /* 1.5rem = 1.5 × 16px = 24px */
+}
+
+nav ul li {
+  margin: 0 1rem; /* 1rem = 16px */
+}
+
+nav ul li a {
+  display: block;
+  color: #800080;
+  text-decoration: none;
+  padding: 0.5rem; /* 0.5rem = 8px */
+}
+
+nav ul li a:hover {
+  background-color: #A52A2A;
+  color: #BC8F8F;
+}
+
+nav ol {
+  display: flex;
+  list-style-type: none;
+}
+
+nav ol li {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.5rem; /* 1.5rem = 1.5 × 16px = 24px */
+}
+
+nav ol li a {
+  display: block;
+  color: #800080;
+  text-decoration: none;
+  padding: 0.5rem 2rem; /* 0.5rem = 8px, 2rem = 32px */
+}
+
+nav ol li a:hover {
+  background-color: #A52A2A;
+  color: #BC8F8F;
+}
+
+.main-info {
+  text-align: center;
+  padding: 3rem 0; /* 3rem = 48px */
+  font-size: 1.5rem; /* 1.5rem = 1.5 × 16px = 24px */
+}
+
+.product-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product-card {
+  width: calc(50% - 2rem); /* 2rem = 32px */
+  margin: 1rem; /* 1rem = 16px */
+  background: radial-gradient(circle at 50% 50%, #DDA0DD 0%, #F0F8FF 100%);
+  text-align: center;
+  padding: 2rem; /* 2rem = 32px */
+}
+
+/* For "Bouquets" and "Additional Products" pages, change the width to 100% */
+.bouquets .product-card,
+.additional-products .product-card {
+  width: calc(100% - 2rem); /* 2rem = 32px */
+}
+
+.bouquets, .additional-products, .featured-products {
+  text-align: center;
+  font-size: 1,5rem; /* 2rem = 32px */
+}
+
+.product-card img {
+  max-width: 50%;
+  height: auto;
+}
+
+.add-to-cart-button {
+  display: block;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 1rem 2rem; /* 1rem = 16px, 2rem = 32px */
+  text-decoration: none;
+  margin-top: 2rem; /* 2rem = 32px */
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Courgette', cursive;
+  font-size: 1.5rem; /* 1.5rem = 1.5 × 16px = 24px */
+}
+
+.add-to-cart-button:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+}
+
+.cart-count {
+  display: none;
+  background-color: #ff6347;
+  color: #ffffff;
+  border-radius: 50%;
+  padding: 0 0.5rem; /* 0.5rem = 8px */
+  font-size: 1rem; /* 1rem = 16px */
+  vertical-align: middle;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem; /* 2rem = 32px */
+  background: linear-gradient(to top, #DDA0DD 0%, #F0FFFF 100%);
+  color: #333;
+}
+
+/* "About Us" page styles */
+.about-us {
+  text-align: center;
+  padding: 3rem 0; /* 3rem = 48px */
+  font-size: 1.5rem; /* 1.5rem = 1.5 × 16px = 24px */
+}
+
+.about-us img {
+  max-width: 30vw; /* 30% от ширины viewport */
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 30px 2px #EE82EE,
+              0 0 50px 4px #E6E6FA,
+              0 0 70px 6px #E6E6FA;
+}
+
+/* Стили для планшетов (ширина экрана от 768px до 1023px) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .logo-container {
+    max-width: 40vw; /* 40% от ширины viewport */
+  }
+  .header-text h1 {
+    font-size: 3.5rem; /* 3.5rem = 3.5 × 16px = 56px */
+  }
+}
+
+/* Стили для телефонов (ширина экрана до 767px) */
+@media only screen and (max-width: 767px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem; /* 1.5rem = 1.5 × 16px = 24px */
+  }
+  .logo-container {
+    max-width: 80vw; /* 60% от ширины viewport */
+    margin-bottom: 1.5rem; /* 1.5rem = 1.5 × 16px = 24px */
+  }
+  .header-text {
+    margin-left: 0;
+  }
+  .header-text h1 {
+    font-size: 3rem; /* 3rem = 3 × 16px = 48px */
+  }
+  nav ul,
+  nav ol {
+    flex-direction: column;
+  }
+  nav ul li,
+  nav ol li {
+    margin: 0.5rem 0; /* 0.5rem = 0.5 × 16px = 8px */
+  }
+  nav ol li a {
+    padding: 0.5rem; /* 0.5rem = 0.5 × 16px = 8px */
+  }
+  .product-card-container {
+    flex-direction: column;
+  }
+  .product-card {
+    width: calc(100% - 2rem); /* 2rem = 32px */
+  }
+  .product-card img {
+  max-width: 100%;
+  height: auto;
+  }
+  .about-us img {
+  max-width: 70vw; /* 70% от ширины viewport */
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 30px 2px #EE82EE,
+              0 0 50px 4px #E6E6FA,
+              0 0 70px 6px #E6E6FA;
+  }
+  body {
+  font-family: "LXGW WenKai TC", cursive;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1rem; /* 2rem = 2 × 16px = 32px */
+  }
+}
