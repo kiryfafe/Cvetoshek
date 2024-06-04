@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Magnet";
-  src: url("FA_Style/webfonts/MagnetTrial-Regular.ttf") format("truetype");
+  font-family: "Yeast";
+  src: url("FA_Style/webfonts/yeast.otf") format("opentype");
   font-style: normal;
   font-weight: normal;
 }
@@ -14,7 +14,7 @@
 body {
   background-image: url('Images/Background.jpg');
   background-size: cover;
-  font-family: 'Magnet';
+  font-family: 'Yeast';
   font-size: 16px; /* базовый размер шрифта */
 }
 
@@ -150,7 +150,7 @@ nav ol li a:hover {
   cursor: pointer;
   margin-left: auto;
   margin-right: auto;
-  font-family: 'Magnet';
+  font-family: 'Yeast';
   font-size: 1.5rem; /* 1.5rem = 1.5 × 16px = 24px */
 }
 
