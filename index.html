@@ -4,11 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cvetoshek - Главная</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ff69b4">
+    <link rel="apple-touch-icon" href="Styles/Images/Logo.png">
 	
     <link rel="stylesheet" href="Styles/styles.css">
     <link rel="stylesheet" href="Styles/FA_Style/css/all.css">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script>
+        // Регистрация Service Worker для PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('Service Worker зарегистрирован:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.error('Ошибка регистрации Service Worker:', error);
+                    });
+            });
+        }
+        </script>
+        <script>
 	$(document).ready(function() {
 		$(".add-to-cart-button").on("click", function() {
 			var currentCount = parseInt(sessionStorage.getItem("cartCount")) || 0;
